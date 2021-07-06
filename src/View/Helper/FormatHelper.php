@@ -18,4 +18,13 @@ class FormatHelper extends Helper
 
         return $active;
     }
+
+    public function emptyDescription ($description)
+    {
+        if (empty($description)) {
+            $description = '<strong><em>' . __("No description found") . '</em></strong>';
+        }
+
+        return $description;
+    }
 }
