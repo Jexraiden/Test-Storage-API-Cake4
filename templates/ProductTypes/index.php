@@ -1,11 +1,11 @@
-<h1>Product Types</h1>
-<?= $this->Html->link("Add New", ['action' => 'add']); ?>
+<h1><?= __("Product Types") ?></h1>
+<?= $this->Html->link(__("Add New"), ['action' => 'add']); ?>
 <table>
     <tr>
-        <th>Name</th>
-        <th>Created</th>
-        <th>Active?</th>
-        <th>Actions</th>
+        <th><?= __("Name") ?></th>
+        <th><?= __("Created") ?></th>
+        <th><?= __("Active?") ?></th>
+        <th><?= __("Actions") ?></th>
     </tr>
     <?php foreach ($product_types as $product_type): ?>
     <tr>
@@ -19,9 +19,9 @@
             <?= $this->Format->active($product_type->active); ?>
         </td>
         <td>
-            <?= $this->Html->link("Edit", ['action' => 'edit', $product_type->id]); ?>
+            <?= $this->Html->link(__("Edit"), ['action' => 'edit', $product_type->id]); ?>
             <?= $this->Form->postLink(
-                "Change Status",
+                __("Change Status"),
                 ['action' => 'activateDeactivate', $product_type->id],
                 ['confirm' => __("Are you sure?")]);
             ?>
