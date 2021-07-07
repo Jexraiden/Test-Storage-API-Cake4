@@ -4,7 +4,7 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-class StorageType extends Entity
+class Order extends Entity
 {
     protected $_accessible = [
         '*' => true,

@@ -5,7 +5,7 @@ namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-class StoragesTable extends Table
+class ProductStocksTable extends Table
 {
     public function initialize(array $config): void
     {
@@ -25,14 +25,14 @@ class StoragesTable extends Table
                 'rule' => function ($value, $context) {
                     $serialnumber = $value;
                     $product_id = $context['data']['product_id'];
-                    $storages_table = $context['providers']['table'];
+                    $product_stocks_table = $context['providers']['table'];
 
-                    $same_product = $storages_table
+                    $same_product = $product_stocks_table
                     ->find()
                     ->where([
-                        'Storages.serialnumber' => $serialnumber,
-                        'Storages.product_id' => $product_id,
-                        'Storages.active' => 1])
+                        'ProductStocks.serialnumber' => $serialnumber,
+                        'ProductStocks.product_id' => $product_id,
+                        'ProductStocks.active' => 1])
                     ->first();
 
                     if (empty($same_product)) {
@@ -41,7 +41,7 @@ class StoragesTable extends Table
 
                     return false;
                 },
-                'message' => __("This product has already been added to storage, please choose a different serial number")
+                'message' => __("This product has already been added to stock, please choose a different serial number")
             ]);
 
         return $validator;
