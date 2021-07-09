@@ -10,6 +10,29 @@ class OrdersController extends AppController
         $this->loadComponent('RequestHandler');
     }
 
+    public function index()
+    {
+        $this->loadComponent('Paginator');
+
+        $query = $this->Orders
+            ->find()
+            ->contain('OrderDetails.ProductStocks.Products.ProductTypes');
+
+        $orders = $this->Paginator->paginate($query);
+
+        $this->set(compact('orders'));
+    }
+
+    public function view($id)
+    {
+        $order = $this->Orders
+            ->findById($id)
+            ->contain('OrderDetails.ProductStocks.Products.ProductTypes')
+            ->firstOrFail();
+
+        $this->set(compact('order'));
+    }
+
     public function add()
     {
         $order = $this->Orders->newEmptyEntity();

@@ -4,7 +4,7 @@ namespace App\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
-//use Cake\ORM\Locator\LocatorAwareTrait;
+use Cake\ORM\Query;
 use Cake\Validation\Validator;
 
 class OrdersTable extends Table
