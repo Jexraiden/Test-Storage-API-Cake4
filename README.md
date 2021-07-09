@@ -14,7 +14,11 @@ Tinker with CakePHP 4 while creating a basic product stock application that a pe
 - Add a REST API for adding and ordering products.
 - (Optional) Create a better interface to navigate through the pages instead of typing the url.
 
-### Feel free to download and tinker with this code too.
+---
+
+**Feel free to download and tinker with this code too.**
+
+---
 
 # Brasileiro
 
@@ -32,4 +36,8 @@ Mexer com o CakePHP 4 enquanto criando uma aplicação básica de estoque de pro
 - Adicionar uma API REST para adicionar produtos e realizar pedidos de produtos.
 - (Opcional) Criar uma interface melhor para navegar pelas páginas em vez de digitar a url.
 
-### Sinta-se livre para baixar e também mexer neste código.
+---
+
+**Sinta-se livre para baixar e também mexer neste código.**
+
+---
