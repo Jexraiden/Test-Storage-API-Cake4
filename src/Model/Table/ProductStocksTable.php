@@ -12,6 +12,7 @@ class ProductStocksTable extends Table
         $this->addBehavior('Timestamp');
         
         $this->belongsTo('Products');
+        $this->hasOne('OrderDetails');
     }
 
     public function validationDefault(Validator $validator): Validator

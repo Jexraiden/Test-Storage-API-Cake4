@@ -12,7 +12,7 @@ class OrderDetailsTable extends Table
         $this->addBehavior('Timestamp');
         
         $this->belongsTo('Orders');
-        $this->hasOne('ProductStocks');
+        $this->belongsTo('ProductStocks');
     }
 
     public function validationDefault(Validator $validator): Validator
